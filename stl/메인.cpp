@@ -36,8 +36,11 @@ void save(const std::string& fname)
 		exit(20260303);
 	}
 
-	char c;
-	in >> std::noskipws;						// 공백도 읽어들임
-	while (in >> c)
-		std::cout << c;
+	std::ofstream out{ "2026 1학기 STL 화56수34.txt", std::ios::app };
+
+	// in의 내용을 읽어서 out에 덧붙이자
+	//std::copy(원본, 복사본);
+	std::copy(std::istreambuf_iterator<char>{in}, {}, 
+		std::ostream_iterator<char>{out});
+
 }

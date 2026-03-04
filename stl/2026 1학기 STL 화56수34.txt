@@ -133,4 +133,1530 @@ void save(const std::string& fname)
 	std::copy(std::istreambuf_iterator<char>{in}, {}, 
 		std::ostream_iterator<char>{out});
 
+}//------------------------------------------------------
+// 2026 1학기 화56수34                 3월 4일          (1주 2일)
+//------------------------------------------------------
+// save 한 시간을 기록한다
+// save를 분리한다
+// -----------------------------------------------------
+#include <iostream>
+#include <string>
+#include <fstream>
+#include <algorithm>
+#include <array>
+#include <chrono>
+
+void save(const std::string& ); // 함수의 선언문: 이름, 인자의 타입과 개수, 반환되는 타입
+
+//--------
+int main()
+//--------
+{
+	std::cout << "2026년 3월 3일" << '\n';
+	// c++ 표준 상에서는 retrun 0;이 없어도 0을 반환, 안넣는게 표준
+	
+	// c++에서 사용하지 말았으면 좋겠는 자료형 char* T* T[N]
+	// 이 3개는 대체품이 명확히 존재해서 별루
+
+	// int t[100]; T[N]의 대체품은 std::array<int, 100> t;
+	std::array<int, 100> t; // zero-overhead 시간상 불리함이 없다. T[N] 쓸 필요가 없다
+
+	t.size(); // 점을 찍어서 사용할 수 있는 멤버함수가 있다
+
+	save("메인.cpp");						// "메인.cpp"를 저장
+}
+
+void save(const std::string& fname)
+{
+	std::cout << '\"' << fname << "\" 저장합니다." << '\n';
+
+	std::ifstream in{ fname };				// RAII
+
+
+	if (not in) {
+		std::cout << '\"' << fname << "\" - 열 수 없습니다." << '\n';
+		exit(20260304);
+	}
+
+	std::ofstream out{ "2026 1학기 STL 화56수34.txt", std::ios::app };
+
+	// 저장한 시간을 out에 기록하자
+	//std::chrono::system_clock::time_point now = std::chrono::system_clock::now();
+	auto now = std::chrono::system_clock::now(); // deduction해서 auto로 쓰자
+	std::cout << now << '\n';
+
+	// in의 내용을 읽어서 out에 덧붙이자
+	//std::copy(원본, 복사본);
+	std::copy(std::istreambuf_iterator<char>{in}, {}, 
+		std::ostream_iterator<char>{out});
+
+}//------------------------------------------------------
+// 2026 1학기 화56수34                 3월 4일          (1주 2일)
+//------------------------------------------------------
+// save 한 시간을 기록한다
+// save를 분리한다
+// -----------------------------------------------------
+#include <iostream>
+#include <string>
+#include <fstream>
+#include <algorithm>
+#include <array>
+#include <chrono>
+
+void save(const std::string& ); // 함수의 선언문: 이름, 인자의 타입과 개수, 반환되는 타입
+
+//--------
+int main()
+//--------
+{
+	std::cout << "2026년 3월 3일" << '\n';
+	// c++ 표준 상에서는 retrun 0;이 없어도 0을 반환, 안넣는게 표준
+	
+	// c++에서 사용하지 말았으면 좋겠는 자료형 char* T* T[N]
+	// 이 3개는 대체품이 명확히 존재해서 별루
+
+	// int t[100]; T[N]의 대체품은 std::array<int, 100> t;
+	std::array<int, 100> t; // zero-overhead 시간상 불리함이 없다. T[N] 쓸 필요가 없다
+
+	t.size(); // 점을 찍어서 사용할 수 있는 멤버함수가 있다
+
+	save("메인.cpp");						// "메인.cpp"를 저장
+}
+
+void save(const std::string& fname)
+{
+	std::cout << '\"' << fname << "\" 저장합니다." << '\n';
+
+	std::ifstream in{ fname };				// RAII
+
+
+	if (not in) {
+		std::cout << '\"' << fname << "\" - 열 수 없습니다." << '\n';
+		exit(20260304);
+	}
+
+	std::ofstream out{ "2026 1학기 STL 화56수34.txt", std::ios::app };
+
+	// 저장한 시간을 out에 기록하자
+	//std::chrono::system_clock::time_point now = std::chrono::system_clock::now();
+	auto now = std::chrono::system_clock::now(); // deduction해서 auto로 쓰자
+	
+	auto UTC = std::chrono::system_clock::to_time_t(now);
+
+	std::cout << UTC << '\n';
+
+	// in의 내용을 읽어서 out에 덧붙이자
+	//std::copy(원본, 복사본);
+	std::copy(std::istreambuf_iterator<char>{in}, {}, 
+		std::ostream_iterator<char>{out});
+
+}//------------------------------------------------------
+// 2026 1학기 화56수34                 3월 4일          (1주 2일)
+//------------------------------------------------------
+// save 한 시간을 기록한다
+// save를 분리한다
+// -----------------------------------------------------
+#include <iostream>
+#include <string>
+#include <fstream>
+#include <algorithm>
+#include <array>
+#include <chrono>
+
+void save(const std::string& ); // 함수의 선언문: 이름, 인자의 타입과 개수, 반환되는 타입
+
+//--------
+int main()
+//--------
+{
+	std::cout << "2026년 3월 3일" << '\n';
+	// c++ 표준 상에서는 retrun 0;이 없어도 0을 반환, 안넣는게 표준
+	
+	// c++에서 사용하지 말았으면 좋겠는 자료형 char* T* T[N]
+	// 이 3개는 대체품이 명확히 존재해서 별루
+
+	// int t[100]; T[N]의 대체품은 std::array<int, 100> t;
+	std::array<int, 100> t; // zero-overhead 시간상 불리함이 없다. T[N] 쓸 필요가 없다
+
+	t.size(); // 점을 찍어서 사용할 수 있는 멤버함수가 있다
+
+	save("메인.cpp");						// "메인.cpp"를 저장
+}
+
+void save(const std::string& fname)
+{
+	std::cout << '\"' << fname << "\" 저장합니다." << '\n';
+
+	std::ifstream in{ fname };				// RAII
+
+
+	if (not in) {
+		std::cout << '\"' << fname << "\" - 열 수 없습니다." << '\n';
+		exit(20260304);
+	}
+
+	std::ofstream out{ "2026 1학기 STL 화56수34.txt", std::ios::app };
+
+	// 저장한 시간을 out에 기록하자
+	//std::chrono::system_clock::time_point now = std::chrono::system_clock::now();
+	auto now = std::chrono::system_clock::now(); // deduction해서 auto로 쓰자
+	
+	auto UTC = std::chrono::system_clock::to_time_t(now);
+
+	std::cout << UTC << '\n';
+
+	// in의 내용을 읽어서 out에 덧붙이자
+	//std::copy(원본, 복사본);
+	std::copy(std::istreambuf_iterator<char>{in}, {}, 
+		std::ostream_iterator<char>{out});
+
+}//------------------------------------------------------
+// 2026 1학기 화56수34                 3월 4일          (1주 2일)
+//------------------------------------------------------
+// save 한 시간을 기록한다
+// save를 분리한다
+// -----------------------------------------------------
+#include <iostream>
+#include <string>
+#include <fstream>
+#include <algorithm>
+#include <array>
+#include <chrono>
+
+void save(const std::string& ); // 함수의 선언문: 이름, 인자의 타입과 개수, 반환되는 타입
+
+//--------
+int main()
+//--------
+{
+	std::cout << "2026년 3월 3일" << '\n';
+	// c++ 표준 상에서는 retrun 0;이 없어도 0을 반환, 안넣는게 표준
+	
+	// c++에서 사용하지 말았으면 좋겠는 자료형 char* T* T[N]
+	// 이 3개는 대체품이 명확히 존재해서 별루
+
+	// int t[100]; T[N]의 대체품은 std::array<int, 100> t;
+	std::array<int, 100> t; // zero-overhead 시간상 불리함이 없다. T[N] 쓸 필요가 없다
+
+	t.size(); // 점을 찍어서 사용할 수 있는 멤버함수가 있다
+
+	save("메인.cpp");						// "메인.cpp"를 저장
+}
+
+void save(const std::string& fname)
+{
+	std::cout << '\"' << fname << "\" 저장합니다." << '\n';
+
+	std::ifstream in{ fname };				// RAII
+
+
+	if (not in) {
+		std::cout << '\"' << fname << "\" - 열 수 없습니다." << '\n';
+		exit(20260304);
+	}
+
+	std::ofstream out{ "2026 1학기 STL 화56수34.txt", std::ios::app };
+
+	// 저장한 시간을 out에 기록하자
+	//std::chrono::system_clock::time_point now = std::chrono::system_clock::now();
+	auto now = std::chrono::system_clock::now(); // deduction해서 auto로 쓰자
+	
+	auto UTC = std::chrono::system_clock::to_time_t(now);
+
+	std::cout << now << '\n';
+
+	// in의 내용을 읽어서 out에 덧붙이자
+	//std::copy(원본, 복사본);
+	std::copy(std::istreambuf_iterator<char>{in}, {}, 
+		std::ostream_iterator<char>{out});
+
+}//------------------------------------------------------
+// 2026 1학기 화56수34                 3월 4일          (1주 2일)
+//------------------------------------------------------
+// save 한 시간을 기록한다
+// save를 분리한다
+// -----------------------------------------------------
+#include <iostream>
+#include <string>
+#include <fstream>
+#include <algorithm>
+#include <array>
+#include <chrono>
+
+void save(const std::string& ); // 함수의 선언문: 이름, 인자의 타입과 개수, 반환되는 타입
+
+//--------
+int main()
+//--------
+{
+	std::cout << "2026년 3월 3일" << '\n';
+	// c++ 표준 상에서는 retrun 0;이 없어도 0을 반환, 안넣는게 표준
+	
+	// c++에서 사용하지 말았으면 좋겠는 자료형 char* T* T[N]
+	// 이 3개는 대체품이 명확히 존재해서 별루
+
+	// int t[100]; T[N]의 대체품은 std::array<int, 100> t;
+	std::array<int, 100> t; // zero-overhead 시간상 불리함이 없다. T[N] 쓸 필요가 없다
+
+	t.size(); // 점을 찍어서 사용할 수 있는 멤버함수가 있다
+
+	save("메인.cpp");						// "메인.cpp"를 저장
+}
+
+void save(const std::string& fname)
+{
+	std::cout << '\"' << fname << "\" 저장합니다." << '\n';
+
+	std::ifstream in{ fname };				// RAII
+
+
+	if (not in) {
+		std::cout << '\"' << fname << "\" - 열 수 없습니다." << '\n';
+		exit(20260304);
+	}
+
+	std::ofstream out{ "2026 1학기 STL 화56수34.txt", std::ios::app };
+
+	// 저장한 시간을 out에 기록하자
+	//std::chrono::system_clock::time_point now = std::chrono::system_clock::now();
+	auto now = std::chrono::system_clock::now(); // deduction해서 auto로 쓰자
+	
+	auto UTC = std::chrono::system_clock::to_time_t(now);
+	std::localtime(&UTC);
+	std::cout << now << '\n';
+
+	// in의 내용을 읽어서 out에 덧붙이자
+	//std::copy(원본, 복사본);
+	std::copy(std::istreambuf_iterator<char>{in}, {}, 
+		std::ostream_iterator<char>{out});
+
+}//------------------------------------------------------
+// 2026 1학기 화56수34                 3월 4일          (1주 2일)
+//------------------------------------------------------
+// save 한 시간을 기록한다
+// save를 분리한다
+// -----------------------------------------------------
+#include <iostream>
+#include <string>
+#include <fstream>
+#include <algorithm>
+#include <array>
+#include <chrono>
+
+void save(const std::string& ); // 함수의 선언문: 이름, 인자의 타입과 개수, 반환되는 타입
+
+//--------
+int main()
+//--------
+{
+	std::cout << "2026년 3월 3일" << '\n';
+	// c++ 표준 상에서는 retrun 0;이 없어도 0을 반환, 안넣는게 표준
+	
+	// c++에서 사용하지 말았으면 좋겠는 자료형 char* T* T[N]
+	// 이 3개는 대체품이 명확히 존재해서 별루
+
+	// int t[100]; T[N]의 대체품은 std::array<int, 100> t;
+	std::array<int, 100> t; // zero-overhead 시간상 불리함이 없다. T[N] 쓸 필요가 없다
+
+	t.size(); // 점을 찍어서 사용할 수 있는 멤버함수가 있다
+
+	save("메인.cpp");						// "메인.cpp"를 저장
+}
+
+void save(const std::string& fname)
+{
+	std::cout << '\"' << fname << "\" 저장합니다." << '\n';
+
+	std::ifstream in{ fname };				// RAII
+
+
+	if (not in) {
+		std::cout << '\"' << fname << "\" - 열 수 없습니다." << '\n';
+		exit(20260304);
+	}
+
+	std::ofstream out{ "2026 1학기 STL 화56수34.txt", std::ios::app };
+
+	// 저장한 시간을 out에 기록하자
+	//std::chrono::system_clock::time_point now = std::chrono::system_clock::now();
+	auto now = std::chrono::system_clock::now(); // deduction해서 auto로 쓰자
+	
+	auto UTC = std::chrono::system_clock::to_time_t(now);
+	std::localtime(&UTC);
+	std::cout << UTC << '\n';
+
+	// in의 내용을 읽어서 out에 덧붙이자
+	//std::copy(원본, 복사본);
+	std::copy(std::istreambuf_iterator<char>{in}, {}, 
+		std::ostream_iterator<char>{out});
+
+}//------------------------------------------------------
+// 2026 1학기 화56수34                 3월 4일          (1주 2일)
+//------------------------------------------------------
+// save 한 시간을 기록한다
+// save를 분리한다
+// -----------------------------------------------------
+#include <iostream>
+#include <string>
+#include <fstream>
+#include <algorithm>
+#include <array>
+#include <chrono>
+
+void save(const std::string& ); // 함수의 선언문: 이름, 인자의 타입과 개수, 반환되는 타입
+
+//--------
+int main()
+//--------
+{
+	std::cout << "2026년 3월 3일" << '\n';
+	// c++ 표준 상에서는 retrun 0;이 없어도 0을 반환, 안넣는게 표준
+	
+	// c++에서 사용하지 말았으면 좋겠는 자료형 char* T* T[N]
+	// 이 3개는 대체품이 명확히 존재해서 별루
+
+	// int t[100]; T[N]의 대체품은 std::array<int, 100> t;
+	std::array<int, 100> t; // zero-overhead 시간상 불리함이 없다. T[N] 쓸 필요가 없다
+
+	t.size(); // 점을 찍어서 사용할 수 있는 멤버함수가 있다
+
+	save("메인.cpp");						// "메인.cpp"를 저장
+}
+
+void save(const std::string& fname)
+{
+	std::cout << '\"' << fname << "\" 저장합니다." << '\n';
+
+	std::ifstream in{ fname };				// RAII
+
+
+	if (not in) {
+		std::cout << '\"' << fname << "\" - 열 수 없습니다." << '\n';
+		exit(20260304);
+	}
+
+	std::ofstream out{ "2026 1학기 STL 화56수34.txt", std::ios::app };
+
+	// 저장한 시간을 out에 기록하자
+	//std::chrono::system_clock::time_point now = std::chrono::system_clock::now();
+	auto now = std::chrono::system_clock::now(); // deduction해서 auto로 쓰자
+	
+	auto UTC = std::chrono::system_clock::to_time_t(now);
+	std::localtime(&UTC);
+	using namespace std::chrono_literals;
+	std::cout << now + 9h << '\n'; // c++ 14는 now가 오버로딩이 안됐다
+
+	// in의 내용을 읽어서 out에 덧붙이자
+	//std::copy(원본, 복사본);
+	std::copy(std::istreambuf_iterator<char>{in}, {}, 
+		std::ostream_iterator<char>{out});
+
+}//------------------------------------------------------
+// 2026 1학기 화56수34                 3월 4일          (1주 2일)
+//------------------------------------------------------
+// save 한 시간을 기록한다
+// save를 분리한다
+// -----------------------------------------------------
+#include <iostream>
+#include <string>
+#include <fstream>
+#include <algorithm>
+#include <array>
+#include <chrono>
+
+void save(const std::string& ); // 함수의 선언문: 이름, 인자의 타입과 개수, 반환되는 타입
+
+//--------
+int main()
+//--------
+{
+	std::cout << "2026년 3월 3일" << '\n';
+	// c++ 표준 상에서는 retrun 0;이 없어도 0을 반환, 안넣는게 표준
+	
+	// c++에서 사용하지 말았으면 좋겠는 자료형 char* T* T[N]
+	// 이 3개는 대체품이 명확히 존재해서 별루
+
+	// int t[100]; T[N]의 대체품은 std::array<int, 100> t;
+	std::array<int, 100> t; // zero-overhead 시간상 불리함이 없다. T[N] 쓸 필요가 없다
+
+	t.size(); // 점을 찍어서 사용할 수 있는 멤버함수가 있다
+
+	save("메인.cpp");						// "메인.cpp"를 저장
+}
+
+void save(const std::string& fname)
+{
+	std::cout << '\"' << fname << "\" 저장합니다." << '\n';
+
+	std::ifstream in{ fname };				// RAII
+
+
+	if (not in) {
+		std::cout << '\"' << fname << "\" - 열 수 없습니다." << '\n';
+		exit(20260304);
+	}
+
+	std::ofstream out{ "2026 1학기 STL 화56수34.txt", std::ios::app };
+
+	// 저장한 시간을 out에 기록하자
+	//std::chrono::system_clock::time_point now = std::chrono::system_clock::now();
+	auto now = std::chrono::system_clock::now(); // deduction해서 auto로 쓰자
+	
+	auto UTC = std::chrono::system_clock::to_time_t(now);
+	std::localtime(&UTC);
+	using namespace std::chrono_literals;
+	std::cout << now + 9h << '\n'; // c++ 14는 now가 오버로딩이 안됐다
+
+	// in의 내용을 읽어서 out에 덧붙이자
+	//std::copy(원본, 복사본);
+	std::copy(std::istreambuf_iterator<char>{in}, {}, 
+		std::ostream_iterator<char>{out});
+
+}//------------------------------------------------------
+// 2026 1학기 화56수34                 3월 4일          (1주 2일)
+//------------------------------------------------------
+// save 한 시간을 기록한다
+// save를 분리한다
+// -----------------------------------------------------
+#include <iostream>
+#include <string>
+#include <fstream>
+#include <algorithm>
+#include <array>
+#include <chrono>
+
+void save(const std::string& ); // 함수의 선언문: 이름, 인자의 타입과 개수, 반환되는 타입
+
+//--------
+int main()
+//--------
+{
+	std::cout << "2026년 3월 3일" << '\n';
+	// c++ 표준 상에서는 retrun 0;이 없어도 0을 반환, 안넣는게 표준
+	
+	// c++에서 사용하지 말았으면 좋겠는 자료형 char* T* T[N]
+	// 이 3개는 대체품이 명확히 존재해서 별루
+
+	// int t[100]; T[N]의 대체품은 std::array<int, 100> t;
+	std::array<int, 100> t; // zero-overhead 시간상 불리함이 없다. T[N] 쓸 필요가 없다
+
+	t.size(); // 점을 찍어서 사용할 수 있는 멤버함수가 있다
+
+	save("메인.cpp");						// "메인.cpp"를 저장
+}
+
+void save(const std::string& fname)
+{
+	std::cout << '\"' << fname << "\" 저장합니다." << '\n';
+
+	std::ifstream in{ fname };				// RAII
+
+
+	if (not in) {
+		std::cout << '\"' << fname << "\" - 열 수 없습니다." << '\n';
+		exit(20260304);
+	}
+
+	std::ofstream out{ "2026 1학기 STL 화56수34.txt", std::ios::app };
+
+	// 저장한 시간을 out에 기록하자
+	//std::chrono::system_clock::time_point now = std::chrono::system_clock::now();
+	auto now = std::chrono::system_clock::now(); // deduction해서 auto로 쓰자
+	
+	auto UTC = std::chrono::system_clock::to_time_t(now);
+	std::localtime(&UTC);
+	using namespace std::chrono_literals; // using은 define을 대신하는 용도로 사용된다
+
+	std::cout << now + 9h << '\n'; // c++ 14는 now가 오버로딩이 안됐다
+
+	// in의 내용을 읽어서 out에 덧붙이자
+	//std::copy(원본, 복사본);
+	std::copy(std::istreambuf_iterator<char>{in}, {}, 
+		std::ostream_iterator<char>{out});
+
+}======================================================================
+저장시간 - 2026-03-04 11:56:35.6632297
+======================================================================
+
+//------------------------------------------------------
+// 2026 1학기 화56수34                 3월 4일          (1주 2일)
+//------------------------------------------------------
+// save 한 시간을 기록한다
+// save를 분리한다
+// -----------------------------------------------------
+#include <iostream>
+#include <string>
+#include <fstream>
+#include <algorithm>
+#include <array>
+#include <chrono>
+
+void save(const std::string& ); // 함수의 선언문: 이름, 인자의 타입과 개수, 반환되는 타입
+
+//--------
+int main()
+//--------
+{
+	std::cout << "2026년 3월 3일" << '\n';
+	// c++ 표준 상에서는 retrun 0;이 없어도 0을 반환, 안넣는게 표준
+	
+	// c++에서 사용하지 말았으면 좋겠는 자료형 char* T* T[N]
+	// 이 3개는 대체품이 명확히 존재해서 별루
+
+	// int t[100]; T[N]의 대체품은 std::array<int, 100> t;
+	std::array<int, 100> t; // zero-overhead 시간상 불리함이 없다. T[N] 쓸 필요가 없다
+
+	t.size(); // 점을 찍어서 사용할 수 있는 멤버함수가 있다
+
+	save("메인.cpp");						// "메인.cpp"를 저장
+}
+
+void save(const std::string& fname)
+{
+	std::cout << '\"' << fname << "\" 저장합니다." << '\n';
+
+	std::ifstream in{ fname };				// RAII
+
+
+	if (not in) {
+		std::cout << '\"' << fname << "\" - 열 수 없습니다." << '\n';
+		exit(20260304);
+	}
+
+	std::ofstream out{ "2026 1학기 STL 화56수34.txt", std::ios::app };
+
+	// 저장한 시간을 out에 기록하자
+	//std::chrono::system_clock::time_point now = std::chrono::system_clock::now();
+	// 시간을 한글로 작성한다면 어떻게 할지 따로 생각해봐라
+	auto now = std::chrono::system_clock::now(); // deduction해서 auto로 쓰자
+	
+	auto UTC = std::chrono::system_clock::to_time_t(now);
+	std::localtime(&UTC);
+	using namespace std::chrono_literals; // using은 define을 대신하는 용도로 사용된다
+
+	
+	out << "======================================================================" << '\n';
+	out << "저장시간 - " << now + 9h << '\n'; // c++ 14는 now가 오버로딩이 안됐다
+	out << "======================================================================" << '\n';
+	out << '\n';
+	// in의 내용을 읽어서 out에 덧붙이자
+	//std::copy(원본, 복사본);
+	std::copy(std::istreambuf_iterator<char>{in}, {}, 
+		std::ostream_iterator<char>{out});
+
+}======================================================================
+저장시간 - 2026-03-04 12:05:40.8630453
+======================================================================
+
+//------------------------------------------------------
+// 2026 1학기 화56수34                 3월 4일          (1주 2일)
+//------------------------------------------------------
+// save 한 시간을 기록한다
+// save를 분리한다
+// -----------------------------------------------------
+#include <iostream>
+#include <string>
+#include <fstream>
+#include <algorithm>
+#include <array>
+#include <chrono>
+
+void save(const std::string& ); // 함수의 선언문: 이름, 인자의 타입과 개수, 반환되는 타입
+
+//--------
+int main()
+//--------
+{
+	std::cout << "2026년 3월 3일" << '\n';
+	// c++ 표준 상에서는 retrun 0;이 없어도 0을 반환, 안넣는게 표준
+	
+	// c++에서 사용하지 말았으면 좋겠는 자료형 char* T* T[N]
+	// 이 3개는 대체품이 명확히 존재해서 별루
+
+	// int t[100]; T[N]의 대체품은 std::array<int, 100> t;
+	std::array<int, 100> t; // zero-overhead 시간상 불리함이 없다. T[N] 쓸 필요가 없다
+
+	t.size(); // 점을 찍어서 사용할 수 있는 멤버함수가 있다
+
+	save("메인.cpp");						// "메인.cpp"를 저장
+}
+
+======================================================================
+저장시간 - 2026-03-04 12:06:31.8912781
+======================================================================
+
+//------------------------------------------------------
+// 2026 1학기 화56수34                 3월 4일          (1주 2일)
+//------------------------------------------------------
+// save 한 시간을 기록한다
+// save를 분리한다
+// -----------------------------------------------------
+#include <iostream>
+#include <string>
+#include <fstream>
+#include <algorithm>
+#include <array>
+#include <chrono>
+
+void save(const std::string& ); // 함수의 선언문: 이름, 인자의 타입과 개수, 반환되는 타입
+
+//--------
+int main()
+//--------
+{
+	std::cout << "2026년 3월 3일" << '\n';
+	// c++ 표준 상에서는 retrun 0;이 없어도 0을 반환, 안넣는게 표준
+	
+	// c++에서 사용하지 말았으면 좋겠는 자료형 char* T* T[N]
+	// 이 3개는 대체품이 명확히 존재해서 별루
+
+	// int t[100]; T[N]의 대체품은 std::array<int, 100> t;
+	std::array<int, 100> t; // zero-overhead 시간상 불리함이 없다. T[N] 쓸 필요가 없다
+
+	t.size(); // 점을 찍어서 사용할 수 있는 멤버함수가 있다
+
+	save("메인.cpp");						// "메인.cpp"를 저장
+}
+
+
+======================================================================
+저장시간 - 2026-03-04 12:07:02.8465894
+======================================================================
+
+//------------------------------------------------------
+// 2026 1학기 화56수34                 3월 4일          (1주 2일)
+//------------------------------------------------------
+// save 한 시간을 기록한다
+// save를 분리한다
+// -----------------------------------------------------
+#include <iostream>
+#include <string>
+#include <fstream>
+#include <algorithm>
+#include <array>
+#include <chrono>
+
+void save(const std::string& ); // 함수의 선언문: 이름, 인자의 타입과 개수, 반환되는 타입
+
+//--------
+int main()
+//--------
+{
+	std::cout << "2026년 3월 3일" << '\n';
+	// c++ 표준 상에서는 retrun 0;이 없어도 0을 반환, 안넣는게 표준
+	
+	// c++에서 사용하지 말았으면 좋겠는 자료형 char* T* T[N]
+	// 이 3개는 대체품이 명확히 존재해서 별루
+
+	// int t[100]; T[N]의 대체품은 std::array<int, 100> t;
+	std::array<int, 100> t; // zero-overhead 시간상 불리함이 없다. T[N] 쓸 필요가 없다
+
+	t.size(); // 점을 찍어서 사용할 수 있는 멤버함수가 있다
+
+	save("메인.cpp");						// "메인.cpp"를 저장
+}
+
+======================================================================
+저장시간 - 2026-03-04 12:09:34.5383065
+======================================================================
+
+//------------------------------------------------------
+// 2026 1학기 화56수34                 3월 4일          (1주 2일)
+//------------------------------------------------------
+// save 한 시간을 기록한다
+// save를 분리한다
+// -----------------------------------------------------
+#include <iostream>
+#include <string>
+#include <fstream>
+#include <algorithm>
+#include <array>
+#include <chrono>
+
+void save(const std::string& ); // 함수의 선언문: 이름, 인자의 타입과 개수, 반환되는 타입
+
+//--------
+int main()
+//--------
+{
+	std::cout << "2026년 3월 3일" << '\n';
+	// c++ 표준 상에서는 retrun 0;이 없어도 0을 반환, 안넣는게 표준
+	
+	// c++에서 사용하지 말았으면 좋겠는 자료형 char* T* T[N]
+	// 이 3개는 대체품이 명확히 존재해서 별루
+
+	// int t[100]; T[N]의 대체품은 std::array<int, 100> t;
+	std::array<int, 100> t; // zero-overhead 시간상 불리함이 없다. T[N] 쓸 필요가 없다
+
+	t.size(); // 점을 찍어서 사용할 수 있는 멤버함수가 있다
+
+	save("메인.cpp");						// "메인.cpp"를 저장
+}======================================================================
+저장시간 - 2026-03-04 12:09:36.2289143
+======================================================================
+
+//------------------------------------------------------
+// 2026 1학기 화56수34                 3월 4일          (1주 2일)
+//------------------------------------------------------
+// save 한 시간을 기록한다
+// save를 분리한다
+// -----------------------------------------------------
+#include <iostream>
+#include <string>
+#include <fstream>
+#include <algorithm>
+#include <array>
+#include <chrono>
+
+void save(const std::string& ); // 함수의 선언문: 이름, 인자의 타입과 개수, 반환되는 타입
+
+//--------
+int main()
+//--------
+{
+	std::cout << "2026년 3월 3일" << '\n';
+	// c++ 표준 상에서는 retrun 0;이 없어도 0을 반환, 안넣는게 표준
+	
+	// c++에서 사용하지 말았으면 좋겠는 자료형 char* T* T[N]
+	// 이 3개는 대체품이 명확히 존재해서 별루
+
+	// int t[100]; T[N]의 대체품은 std::array<int, 100> t;
+	std::array<int, 100> t; // zero-overhead 시간상 불리함이 없다. T[N] 쓸 필요가 없다
+
+	t.size(); // 점을 찍어서 사용할 수 있는 멤버함수가 있다
+
+	save("메인.cpp");						// "메인.cpp"를 저장
+}======================================================================
+저장시간 - 2026-03-04 12:09:57.2750964
+======================================================================
+
+//------------------------------------------------------
+// 2026 1학기 화56수34                 3월 4일          (1주 2일)
+//------------------------------------------------------
+// save 한 시간을 기록한다
+// save를 분리한다
+// -----------------------------------------------------
+#include <iostream>
+#include <string>
+#include <fstream>
+#include <algorithm>
+#include <array>
+#include <chrono>
+
+void save(const std::string& ); // 함수의 선언문: 이름, 인자의 타입과 개수, 반환되는 타입
+
+//--------
+int main()
+//--------
+{
+	std::cout << "2026년 3월 3일" << '\n';
+	// c++ 표준 상에서는 retrun 0;이 없어도 0을 반환, 안넣는게 표준
+	
+	// c++에서 사용하지 말았으면 좋겠는 자료형 char* T* T[N]
+	// 이 3개는 대체품이 명확히 존재해서 별루
+
+	// int t[100]; T[N]의 대체품은 std::array<int, 100> t;
+	std::array<int, 100> t; // zero-overhead 시간상 불리함이 없다. T[N] 쓸 필요가 없다
+
+	t.size(); // 점을 찍어서 사용할 수 있는 멤버함수가 있다
+
+	save("메인.cpp");						// "메인.cpp"를 저장
+}
+======================================================================
+저장시간 - 2026-03-04 12:10:00.3715027
+======================================================================
+
+//------------------------------------------------------
+// 2026 1학기 화56수34                 3월 4일          (1주 2일)
+//------------------------------------------------------
+// save 한 시간을 기록한다
+// save를 분리한다
+// -----------------------------------------------------
+#include <iostream>
+#include <string>
+#include <fstream>
+#include <algorithm>
+#include <array>
+#include <chrono>
+
+void save(const std::string& ); // 함수의 선언문: 이름, 인자의 타입과 개수, 반환되는 타입
+
+//--------
+int main()
+//--------
+{
+	std::cout << "2026년 3월 3일" << '\n';
+	// c++ 표준 상에서는 retrun 0;이 없어도 0을 반환, 안넣는게 표준
+	
+	// c++에서 사용하지 말았으면 좋겠는 자료형 char* T* T[N]
+	// 이 3개는 대체품이 명확히 존재해서 별루
+
+	// int t[100]; T[N]의 대체품은 std::array<int, 100> t;
+	std::array<int, 100> t; // zero-overhead 시간상 불리함이 없다. T[N] 쓸 필요가 없다
+
+	t.size(); // 점을 찍어서 사용할 수 있는 멤버함수가 있다
+
+	save("메인.cpp");						// "메인.cpp"를 저장
+}
+======================================================================
+저장시간 - 2026-03-04 12:10:59.9053489
+======================================================================
+
+//------------------------------------------------------
+// 2026 1학기 화56수34                 3월 4일          (1주 2일)
+//------------------------------------------------------
+// save 한 시간을 기록한다
+// save를 분리한다
+// -----------------------------------------------------
+#include <iostream>
+#include <string>
+#include <fstream>
+#include <algorithm>
+#include <array>
+#include <chrono>
+
+#include "save.h"
+
+//--------
+int main()
+//--------
+{
+	std::cout << "2026년 3월 3일" << '\n';
+	// c++ 표준 상에서는 retrun 0;이 없어도 0을 반환, 안넣는게 표준
+	
+	// c++에서 사용하지 말았으면 좋겠는 자료형 char* T* T[N]
+	// 이 3개는 대체품이 명확히 존재해서 별루
+
+	// int t[100]; T[N]의 대체품은 std::array<int, 100> t;
+	std::array<int, 100> t; // zero-overhead 시간상 불리함이 없다. T[N] 쓸 필요가 없다
+
+	t.size(); // 점을 찍어서 사용할 수 있는 멤버함수가 있다
+
+	save("메인.cpp");						// "메인.cpp"를 저장
+}
+======================================================================
+저장시간 - 2026-03-04 12:14:27.0639747
+======================================================================
+
+//------------------------------------------------------
+// 2026 1학기 화56수34                 3월 4일          (1주 2일)
+//------------------------------------------------------
+// save 한 시간을 기록한다
+// save를 분리한다
+// -----------------------------------------------------
+#include <iostream>
+
+#include "save.h"
+
+//--------
+int main()
+//--------
+{
+	std::cout << "2026년 3월 4일 - save 완성" << '\n';
+
+	save("메인.cpp");
+}
+======================================================================
+저장시간 - 2026-03-04 12:14:29.1437810
+======================================================================
+
+//------------------------------------------------------
+// 2026 1학기 화56수34                 3월 4일          (1주 2일)
+//------------------------------------------------------
+// save 한 시간을 기록한다
+// save를 분리한다
+// -----------------------------------------------------
+#include <iostream>
+
+#include "save.h"
+
+//--------
+int main()
+//--------
+{
+	std::cout << "2026년 3월 4일 - save 완성" << '\n';
+
+	save("메인.cpp");
+}
+======================================================================
+저장시간 - 2026-03-04 12:15:31.5948434
+======================================================================
+
+//-----------------------------------------------------------------------------------------------------------
+// 한 학기 강의를 저장하는 함수
+// 
+// 2026/3/4																						송광민															
+//-----------------------------------------------------------------------------------------------------------
+
+
+#pragma once
+#include <iostream>
+#include <string>
+#include <fstream>
+#include <algorithm>
+#include <chrono>
+
+
+void save(const std::string&);
+======================================================================
+저장시간 - 2026-03-04 12:15:31.6034177
+======================================================================
+
+//-----------------------------------------------------------------------------------------------------------
+// 한 학기 강의를 저장하는 함수
+// 
+// 2026/3/4																						송광민															
+//-----------------------------------------------------------------------------------------------------------
+
+#include "save.h"
+
+void save(const std::string& fname)
+{
+	std::cout << '\"' << fname << "\" 저장합니다." << '\n';
+
+	std::ifstream in{ fname };				// RAII
+
+
+	if (not in) {
+		std::cout << '\"' << fname << "\" - 열 수 없습니다." << '\n';
+		exit(20260304);
+	}
+
+	std::ofstream out{ "2026 1학기 STL 화56수34.txt", std::ios::app };
+
+	// 저장한 시간을 out에 기록하자
+	//std::chrono::system_clock::time_point now = std::chrono::system_clock::now();
+	// 시간을 한글로 작성한다면 어떻게 할지 따로 생각해봐라
+	auto now = std::chrono::system_clock::now(); // deduction해서 auto로 쓰자
+
+	auto UTC = std::chrono::system_clock::to_time_t(now);
+	std::localtime(&UTC);
+	using namespace std::chrono_literals; // using은 define을 대신하는 용도로 사용된다
+
+
+	out << "======================================================================" << '\n';
+	out << "저장시간 - " << now + 9h << '\n'; // c++ 14는 now가 오버로딩이 안됐다
+	out << "======================================================================" << '\n';
+	out << '\n';
+	// in의 내용을 읽어서 out에 덧붙이자
+	//std::copy(원본, 복사본);
+	std::copy(std::istreambuf_iterator<char>{in}, {},
+		std::ostream_iterator<char>{out});
+
+	out << '\n';
+
+}
+======================================================================
+저장시간 - 2026-03-04 12:15:31.6101726
+======================================================================
+
+//------------------------------------------------------
+// 2026 1학기 화56수34                 3월 4일          (1주 2일)
+//------------------------------------------------------
+// save 한 시간을 기록한다
+// save를 분리한다
+// -----------------------------------------------------
+#include <iostream>
+
+#include "save.h"
+
+//--------
+int main()
+//--------
+{
+	std::cout << "2026년 3월 4일 - save 완성" << '\n';
+	save("save.h");
+	save("save.cpp");
+	save("메인.cpp");
+}
+======================================================================
+저장시간 - 2026년 03월 04일 수요일 12시 29분 59.4168607초
+======================================================================
+
+//------------------------------------------------------
+// 2026 1학기 화56수34                 3월 4일          (1주 2일)
+//------------------------------------------------------
+// template
+// -----------------------------------------------------
+#include <iostream>
+
+#include "save.h"
+using namespace std; // 강의를 위해 어쩔 수 없이 사용
+
+//--------
+int main()
+//--------
+{
+	save("메인.cpp");
+}
+======================================================================
+저장시간 - 2026-03-04 12:33:27.7449375
+======================================================================
+
+//------------------------------------------------------
+// 2026 1학기 화56수34                 3월 4일          (1주 2일)
+//------------------------------------------------------
+// template
+// -----------------------------------------------------
+#include <iostream>
+
+#include "save.h"
+using namespace std; // 강의를 위해 어쩔 수 없이 사용
+
+void change(int& x, int& y)
+{
+	int temp = x;
+	x = y;
+	y = temp;
+}
+
+//--------
+int main()
+//--------
+{
+	int a{ 1 }, b{ 2 };
+	// [문제] change를 호출해서 다음과 같이 출력되게 하라
+
+	change(a, b);
+
+	cout << a << ", " << b << endl; // 2, 1
+
+	save("메인.cpp");
+}
+======================================================================
+저장시간 - 2026-03-04 12:38:26.4134630
+======================================================================
+
+//------------------------------------------------------
+// 2026 1학기 화56수34                 3월 4일          (1주 2일)
+//------------------------------------------------------
+// template
+// -----------------------------------------------------
+#include <iostream>
+
+#include "save.h"
+using namespace std; // 강의를 위해 어쩔 수 없이 사용
+
+void change(int* x, int* y) // change와 main은 다른 곳에 있으므로 주소를 보내야 한다
+{
+	int temp = *x;
+	*x = *y;
+	*y = temp;
+}
+
+//--------
+int main()
+//--------
+{
+	int a{ 1 }, b{ 2 };
+	// [문제] change를 호출해서 다음과 같이 출력되게 하라
+
+	change(&a, &b);
+
+	cout << a << ", " << b << endl; // 2, 1
+
+	save("메인.cpp");
+}
+======================================================================
+저장시간 - 2026-03-04 12:47:50.0932957
+======================================================================
+
+//------------------------------------------------------
+// 2026 1학기 화56수34                 3월 4일          (1주 2일)
+//------------------------------------------------------
+// template
+// -----------------------------------------------------
+#include <iostream>
+
+#include "save.h"
+using namespace std; // 강의를 위해 어쩔 수 없이 사용
+
+class Dog{
+private:
+	int age;
+public:
+	Dog(const Dog& d){
+				age = d.age;
+	}
+	Dog(int a) : age{ a } {}
+	
+	Dog& operator=(const Dog& d){
+				age = d.age;
+				return *this;
+	}
+
+	friend std::ostream& operator << (std::ostream& out, const Dog& d)
+	{
+		out << d.age;
+
+		return out;
+	}
+
+};
+
+void change(int& x, int& y) // 레퍼런스 가면을 씌우면 코드가 깔끔해진다
+{
+	int temp{ x };
+	x = y;
+	y = temp;
+}
+
+void change(Dog& x, Dog& y)
+{
+	Dog temp{ x };
+	x = y;
+	y = temp;
+}
+
+//--------
+int main()
+//--------
+{
+	{
+		int a{ 1 }, b{ 2 };
+		// [문제] change를 호출해서 다음과 같이 출력되게 하라
+
+		change(a, b);
+
+		cout << a << ", " << b << endl; // 2, 1
+	}
+
+	{
+		Dog a{ 1 }, b{ 2 };
+		// [문제] change를 호출해서 다음과 같이 출력되게 하라
+
+		change(a, b);
+
+		cout << a << ", " << b << endl; // 2, 1
+	}
+
+
+	save("메인.cpp");
+}
+======================================================================
+저장시간 - 2026-03-04 12:53:05.2540793
+======================================================================
+
+//------------------------------------------------------
+// 2026 1학기 화56수34                 3월 4일          (1주 2일)
+//------------------------------------------------------
+// template
+// -----------------------------------------------------
+#include <iostream>
+
+#include "save.h"
+using namespace std; // 강의를 위해 어쩔 수 없이 사용
+
+class Dog{
+public:
+	Dog() = default;
+	Dog(const Dog& d){
+				age = d.age;
+	}
+	Dog(int a) : age{ a } {}
+	
+	Dog& operator=(const Dog& d){
+				age = d.age;
+				return *this;
+	}
+
+	friend std::ostream& operator << (std::ostream& out, const Dog& d)
+	{
+		out << d.age;
+
+		return out;
+	}
+
+
+private:
+	int age{};
+
+};
+
+void change(int& x, int& y) // 레퍼런스 가면을 씌우면 코드가 깔끔해진다
+{
+	int temp{ x };
+	x = y;
+	y = temp;
+}
+
+void change(Dog& x, Dog& y)
+{
+	Dog temp{ x };
+	x = y;
+	y = temp;
+}
+
+//--------
+int main()
+//--------
+{
+	{
+		int a{ 1 }, b{ 2 };
+		// [문제] change를 호출해서 다음과 같이 출력되게 하라
+
+		change(a, b);
+
+		cout << a << ", " << b << endl; // 2, 1
+	}
+
+	{
+		Dog a{ 1 }, b{ 2 };
+		// [문제] change를 호출해서 다음과 같이 출력되게 하라
+
+		change(a, b);
+
+		cout << a << ", " << b << endl; // 2, 1
+	}
+
+
+	save("메인.cpp");
+}
+======================================================================
+저장시간 - 2026-03-04 12:57:54.3035279
+======================================================================
+
+//------------------------------------------------------
+// 2026 1학기 화56수34                 3월 4일          (1주 2일)
+//------------------------------------------------------
+// template
+// -----------------------------------------------------
+#include <iostream>
+
+#include "save.h"
+using namespace std; // 강의를 위해 어쩔 수 없이 사용
+
+class Dog{
+public:
+	Dog() = default;
+	Dog(const Dog& d) { // 만들 필요가 없었다. 컴파일러가 만들어주는 복사 생성자가 완벽하게 작동하기 때문이다.
+				age = d.age;
+	}
+
+	Dog(int a) : age{ a } {}
+	
+	Dog& operator=(const Dog& d) { // 만들 필요가 없었다. 컴파일러가 만들어주는 복사 대입 연산자가 완벽하게 작동하기 때문이다.
+				age = d.age;
+				return *this;
+	}
+
+	/*friend std::ostream& operator << (std::ostream& out, const Dog& d)
+	{
+		out << d.age;
+
+		return out;
+	}*/
+
+	operator int() {
+		return age;
+	}
+
+
+private:
+	int age{};
+
+};
+
+void change(int& x, int& y) // 레퍼런스 가면을 씌우면 코드가 깔끔해진다
+{
+	int temp{ x };
+	x = y;
+	y = temp;
+}
+
+void change(Dog& x, Dog& y)
+{
+	Dog temp{ x };
+	x = y;
+	y = temp;
+}
+
+//--------
+int main()
+//--------
+{
+	{
+		int a{ 1 }, b{ 2 };
+		// [문제] change를 호출해서 다음과 같이 출력되게 하라
+
+		change(a, b);
+
+		cout << a << ", " << b << endl; // 2, 1
+	}
+
+	{
+		Dog a{ 1 }, b{ 2 };
+		// [문제] change를 호출해서 다음과 같이 출력되게 하라
+
+		change(a, b);
+
+		cout << a << ", " << b << endl; // 2, 1
+	}
+
+
+	save("메인.cpp");
+}
+======================================================================
+저장시간 - 2026-03-04 13:02:25.9097482
+======================================================================
+
+//------------------------------------------------------
+// 2026 1학기 화56수34                 3월 4일          (1주 2일)
+//------------------------------------------------------
+// template
+// -----------------------------------------------------
+#include <iostream>
+
+#include "save.h"
+using namespace std; // 강의를 위해 어쩔 수 없이 사용
+
+class Dog{
+public:
+	Dog() = default;
+	Dog(const Dog& d) { // 만들 필요가 없었다. 컴파일러가 만들어주는 복사 생성자가 완벽하게 작동하기 때문이다.
+				age = d.age;
+	}
+
+	Dog(int a) : age{ a } {}
+	
+	Dog& operator=(const Dog& d) { // 만들 필요가 없었다. 컴파일러가 만들어주는 복사 대입 연산자가 완벽하게 작동하기 때문이다.
+				age = d.age;
+				return *this;
+	}
+
+	friend std::ostream& operator << (std::ostream& out, const Dog& d)
+	{
+		out << d.age;
+
+		return out;
+	}
+
+	
+
+
+private:
+	int age{};
+
+};
+
+void change(int& x, int& y) // 레퍼런스 가면을 씌우면 코드가 깔끔해진다
+{
+	int temp{ x };
+	x = y;
+	y = temp;
+}
+
+void change(Dog& x, Dog& y)
+{
+	Dog temp{ x };
+	x = y;
+	y = temp;
+}
+
+//--------
+int main()
+//--------
+{
+	{
+		int a{ 1 }, b{ 2 };
+		// [문제] change를 호출해서 다음과 같이 출력되게 하라
+
+		change(a, b);
+
+		cout << a << ", " << b << endl; // 2, 1
+	}
+
+	{
+		Dog a{ 1 }, b{ 2 };
+		// [문제] change를 호출해서 다음과 같이 출력되게 하라
+
+		change(a, b);
+
+		cout << a << ", " << b << endl; // 2, 1
+	}
+
+
+	save("메인.cpp");
+}
+======================================================================
+저장시간 - 2026-03-04 13:03:51.3660397
+======================================================================
+
+//------------------------------------------------------
+// 2026 1학기 화56수34                 3월 4일          (1주 2일)
+//------------------------------------------------------
+// template
+// -----------------------------------------------------
+#include <iostream>
+
+#include "save.h"
+using namespace std; // 강의를 위해 어쩔 수 없이 사용
+
+class Dog{
+public:
+	Dog() = default;
+	Dog(const Dog& d) { // 만들 필요가 없었다. 컴파일러가 만들어주는 복사 생성자가 완벽하게 작동하기 때문이다.
+				age = d.age;
+	}
+
+	Dog(int a) : age{ a } {}
+	
+	Dog& operator=(const Dog& d) { // 만들 필요가 없었다. 컴파일러가 만들어주는 복사 대입 연산자가 완벽하게 작동하기 때문이다.
+				age = d.age;
+				return *this;
+	}
+
+	friend std::ostream& operator << (std::ostream& out, const Dog& d)
+	{
+		out << d.age;
+
+		return out;
+	}
+
+	
+
+
+private:
+	int age{};
+
+};
+
+void change(int& x, int& y) // 레퍼런스 가면을 씌우면 코드가 깔끔해진다
+{
+	int temp{ x };
+	x = y;
+	y = temp;
+}
+
+void change(Dog& x, Dog& y)
+{
+	Dog temp{ x };
+	x = y;
+	y = temp;
+}
+
+//--------
+int main()
+//--------
+{
+	{
+		int a{ 1 }, b{ 2 };
+		// [문제] change를 호출해서 다음과 같이 출력되게 하라
+
+		change(a, b);
+
+		cout << a << ", " << b << endl; // 2, 1
+	}
+
+	{
+		Dog a{ 1 }, b{ 2 };
+		// [문제] change를 호출해서 다음과 같이 출력되게 하라
+
+		change(a, b);
+
+		cout << a << ", " << b << endl; // 2, 1
+	}
+
+
+	save("메인.cpp");
 }

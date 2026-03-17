@@ -1,73 +1,38 @@
 //------------------------------------------------------
 // 2026 1학기 화56수34                 3월 4일          (2주 1일)
 //------------------------------------------------------
-// template
+// 많은 자료를 처리하기
 // -----------------------------------------------------
 #include <iostream>
+#include <random>
+using namespace std;
 
 #include "save.h"
-using namespace std; // 강의를 위해 어쩔 수 없이 사용
-
-class Dog{
-public:
-	Dog() = default;
-	Dog(const Dog& d) { // 만들 필요가 없었다. 컴파일러가 만들어주는 복사 생성자가 완벽하게 작동하기 때문이다.
-				age = d.age;
-	}
-
-	Dog(int a) : age{ a } {}
-	
-	Dog& operator=(const Dog& d) { // 만들 필요가 없었다. 컴파일러가 만들어주는 복사 대입 연산자가 완벽하게 작동하기 때문이다.
-				age = d.age;
-				return *this;
-	}
-
-	friend std::ostream& operator << (std::ostream& out, const Dog& d)
-	{
-		out << d.age;
-
-		return out;
-	}
-
-	
 
 
-private:
-	int age{};
+default_random_engine dre;
+uniform_int_distribution<int> uid{ 0, 999'9999 }; // 클래스인데도 <int> 뺄 수 있다
 
-};
-
-template <class T> // 템플릿 선언
-void change(T& x, T& y) // 템플릿 정의 - 동시에 해야 함
-{
-	T temp{ x };
-	x = y;
-	y = temp;
-}
 
 
 //--------
 int main()
 //--------
 {
-	{
-		int a{ 1 }, b{ 2 };
-		// [문제] change를 호출해서 다음과 같이 출력되게 하라
+	// [문제] "int값1000만개.txt"에 저장한 int값을 읽어 화면에 저장하라
 
-		change(a, b);
+	std::ifstream in{ "int값1000만개.txt" };
 
-		cout << a << ", " << b << endl; // 2, 1
+	if (not in) {
+		std::cout << "\" - 열 수 없습니다." << '\n';
+		exit(20260304);
 	}
 
-	{
-		Dog a{ 1 }, b{ 2 };
-		// [문제] change를 호출해서 다음과 같이 출력되게 하라
-
-		change(a, b);
-
-		cout << a << ", " << b << endl; // 2, 1
+	char n;
+	while (in >> n) {
+		cout << n;
 	}
-
 
 	save("메인.cpp");
 }
+
